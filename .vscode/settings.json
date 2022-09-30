@@ -1,0 +1,6 @@
+{
+  "files.associations": {
+    "*.todo": "dockercompose",
+    "string.h": "c"
+  }
+}
