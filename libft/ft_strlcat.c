@@ -2,10 +2,10 @@
 
 size_t ft_strlcat(char *dst, const char *src, size_t size)
 {
-	long	i;
-	long	originaldstlen;
-	long	dlen;
-	long	slen;
+	size_t	i;
+	size_t	originaldstlen;
+	size_t	dlen;
+	size_t	slen;
 
 	originaldstlen = ft_strlen(dst);
 	dlen = ft_strlen(dst);
