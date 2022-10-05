@@ -26,14 +26,14 @@ void * ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 }
 #include <stdio.h>
 
-int main(int argc, char **argv)
-{
-	(void) argc;
-	(void) argv;
-	char str1[50] = "hello world";
-	char str2[50] = "1337";
-	printf("%s \n",memcpy(str2, str1, 0));
-	printf("%s",ft_memcpy(str2, str1, 0));
+// int main(int argc, char **argv)
+// {
+// 	(void) argc;
+// 	(void) argv;
+// 	char str1[50] = "hello world";
+// 	char str2[50] = "1337";
+// 	printf("%s \n",memcpy(str2, str1, 0));
+// 	printf("%s",ft_memcpy(str2, str1, 0));
 
-	return 0;
-}
+// 	return 0;
+// }

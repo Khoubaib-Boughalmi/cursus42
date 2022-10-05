@@ -71,18 +71,18 @@ char *ft_strtrim(char const *s1, char const *set)
 }
 
 
-int main()
-{
-	char str1[100] = "hello world";
-	char str2[100] = "h ";
-	char * ptr1;
-	char * ptr2;
+// int main()
+// {
+// 	char str1[100] = "hello world";
+// 	char str2[100] = "h ";
+// 	char * ptr1;
+// 	char * ptr2;
 
-	//  ft_strtrim_end(str1, str2);
-	//  ft_strtrim_start(str1, str2);
-	ptr1 = ft_strtrim(str1, str2);
-	printf("%s+\n",ptr1);
+// 	//  ft_strtrim_end(str1, str2);
+// 	//  ft_strtrim_start(str1, str2);
+// 	ptr1 = ft_strtrim(str1, str2);
+// 	printf("%s+\n",ptr1);
 
-	// ptr1 =  ft_strjoin(NULL, str2);
-	return 0;
-}
+// 	// ptr1 =  ft_strjoin(NULL, str2);
+// 	return 0;
+// }
