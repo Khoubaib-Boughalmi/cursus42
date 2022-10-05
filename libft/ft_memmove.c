@@ -22,6 +22,7 @@ void *ft_memmove(void *s1, const void *s2, size_t n)
 		while (n-- != 0)
 			*p1++ = *p2++;
 	}
+	return (s1);
 }
 
 
