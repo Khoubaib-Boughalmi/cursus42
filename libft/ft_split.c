@@ -86,16 +86,16 @@ char **ft_split(char const *s, char c)
 	return (ptr);
 }
 
-int main()
-{
-	char str[50] = "   hello             world this is 1337       ";
-	char **ptr = ft_split(str, ' ');
-	int i = 0;
-	while (ptr[i])
-	{
-		printf("%s-\n", ptr[i]);
-		i++;
-	}
+// int main()
+// {
+// 	char str[50] = "   hello             world this is 1337       ";
+// 	char **ptr = ft_split(str, ' ');
+// 	int i = 0;
+// 	while (ptr[i])
+// 	{
+// 		printf("%s-\n", ptr[i]);
+// 		i++;
+// 	}
 	
-	return 0;
-}
+// 	return 0;
+// }

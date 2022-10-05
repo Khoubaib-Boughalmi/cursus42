@@ -2,16 +2,16 @@
 # define LIBFT_H
 
 # include <stdio.h>
-#include <io.h>
+#include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
 
 // int
-// int		ft_isalpha(int c);
-// int		ft_isdigit(int c);
-// int		ft_isalnum(int c);
-// int		ft_isascii(int c);
-// int		ft_isprint(int c);
+int		ft_isalpha(int c);
+int		ft_isdigit(int c);
+int		ft_isalnum(int c);
+int		ft_isascii(int c);
+int		ft_isprint(int c);
 int		ft_tolower(int ch);
 int		ft_toupper(int ch);
 int		ft_atoi(const char *str);
@@ -27,14 +27,14 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 void	*ft_memset(void *word, int latter, size_t length);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memchr(const void *ptr, int c, size_t n);
-// void	ft_bzero(void *word, size_t length);
+void	ft_bzero(void *word, size_t length);
 void	*ft_calloc(size_t count, size_t size);
 void	*ft_memmove(void *dest, const void *src, size_t n);
-// void	ft_putchar_fd(char c, int fd);
-// void	ft_putstr_fd(char const *s, int fd);
-// void	ft_putendl_fd(char const *s, int fd);
-// void	ft_putnbr_fd(int n, int fd);
-// void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char const *s, int fd);
+void	ft_putendl_fd(char const *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 //char
 char	*ft_strchr(const char *str, int c);

@@ -51,9 +51,9 @@ char *ft_itoa(int n)
 	return (ptr);
 }
 
-int main()
-{
-	// ft_itoa(123);
-	printf("%s", ft_itoa(0));
-	return 0;
-}
+// int main()
+// {
+// 	// ft_itoa(123);
+// 	printf("%s", ft_itoa(0));
+// 	return 0;
+// }
