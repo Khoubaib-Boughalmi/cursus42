@@ -1,8 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: khoubaib <khoubaib@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/07 21:02:32 by khoubaib          #+#    #+#             */
+/*   Updated: 2022/10/07 21:07:36 by khoubaib         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-#include <stdio.h>
 
-
-size_t  ft_word_count(char const *str, char c)
+static size_t	ft_word_count(char const *str, char c)
 {
 	size_t	i;
 	size_t	count;
@@ -14,29 +24,30 @@ size_t  ft_word_count(char const *str, char c)
 		while (str[i] != '\0' && str[i] == c)
 			i++;
 		if (str[i] != '\0')
-			count++;		
+			count++;
 		while (str[i] != '\0' && str[i] != c)
 			i++;
 		while (str[i] != '\0' && str[i] == c)
-			i++;		
+			i++;
 	}
 	return (count);
 }
-size_t ft_word_len(char const *str, char c)
+
+static size_t	ft_word_len(char const *str, char c)
 {
-	size_t count;
+	size_t	count;
 
 	count = 0;
 	while (str[count] != '\0' && str[count] != c)
 		count++;
-	return count;
+	return (count);
 }
 
-char * ft_copy(char const *s, char c, int *i)
+char	*ft_copy(char const *s, char c, int *i)
 {
 	int		word_len;
-	char *ptr; 
-	int j;
+	char	*ptr;
+	int		j;
 
 	word_len = ft_word_len(&s[*i], c);
 	ptr = (char *)malloc(sizeof(char) * (word_len + 1));
@@ -49,10 +60,10 @@ char * ft_copy(char const *s, char c, int *i)
 		*i += 1;
 	}
 	ptr[j] = '\0';
-	return ptr;
+	return (ptr);
 }
 
-char ** ft_free(char **ptr, int k)
+char	**ft_free(char **ptr, int k)
 {
 	while (k--)
 		free(ptr[k]);
@@ -60,7 +71,7 @@ char ** ft_free(char **ptr, int k)
 	return (NULL);
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	int		i;
 	int		k;
@@ -77,25 +88,12 @@ char **ft_split(char const *s, char c)
 			i++;
 		if (s[i] != '\0')
 		{
-			if(!(ptr[k] = ft_copy(s, c, &i)))
-				return ft_free(ptr, k);
+			ptr[k] = ft_copy(s, c, &i);
+			if (!ptr[k])
+				return (ft_free(ptr, k));
 			k++;
 		}
 	}
 	ptr[k] = 0;
 	return (ptr);
 }
-
-// int main()
-// {
-// 	char str[50] = "   hello             world this is 1337       ";
-// 	char **ptr = ft_split(str, ' ');
-// 	int i = 0;
-// 	while (ptr[i])
-// 	{
-// 		printf("%s-\n", ptr[i]);
-// 		i++;
-// 	}
-	
-// 	return 0;
-// }

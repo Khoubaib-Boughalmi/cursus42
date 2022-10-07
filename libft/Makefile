@@ -26,4 +26,7 @@ fclean: clean
 
 re: fclean all
 
+so: all
+			gcc -o libft.so -shared -fPIC $(OBJ) $(B_OBJ)
+
 .PHONY: all bonus clean fclean re
