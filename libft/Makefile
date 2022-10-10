@@ -49,28 +49,26 @@ SRCS_BONUS= ft_lstadd_back_bonus.c        \
             ft_lstnew_bonus.c            \
             ft_lstsize_bonus.c
 
-OBJ 			= ${SRCS:.c=.o}
+OBJ 	        = ${SRCS:.c=.o}
 B_OBJ 		= ${SRCS_BONUS:.c=.o}
 
 %.o:%.c	
-			${CC}	-c $< -o $@ ${CFLAGS}
+		${CC}	-c $< -o $@ ${CFLAGS}
 
 ${NAME}:	${OBJ}
-					${AR} ${NAME} ${OBJ}
+		${AR} ${NAME} ${OBJ}
 
 all:	${NAME}
 
 clean:	
-				${RM} ${OBJ} ${B_OBJ}
+		${RM} ${OBJ} ${B_OBJ}
 	
 fclean:	clean
-				${RM} ${NAME}
+		${RM} ${NAME}
 
-re:			fclean all
+re:	fclean all
 
 bonus:	${name}	${B_OBJ}
-				${AR} ${NAME} ${B_OBJ}
-so: all
-			gcc -o libft.so -shared -fPIC $(OBJ) $(B_OBJ)
+	${AR} ${NAME} ${B_OBJ}
 
 .PHONY:	all clean fclean re bonus

@@ -1,8 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kboughal <kboughal@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/10 14:39:21 by kboughal          #+#    #+#             */
+/*   Updated: 2022/10/10 14:41:24 by kboughal         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
-#include <unistd.h>
+# include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
 
@@ -50,9 +61,9 @@ char	**ft_split(char const *s, char c);
 
 typedef struct s_list
 {
-	void 					*content;
-	struct s_list *next;
-} 							t_list;
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 t_list	*ft_lstnew(void *content);
 t_list	*ft_lstlast(t_list *lst);

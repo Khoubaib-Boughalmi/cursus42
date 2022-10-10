@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: khoubaib <khoubaib@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kboughal <kboughal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 21:12:18 by khoubaib          #+#    #+#             */
-/*   Updated: 2022/10/07 21:12:46 by khoubaib         ###   ########.fr       */
+/*   Updated: 2022/10/10 17:04:35 by kboughal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	dst[i] = '\0';
 	return (slen);
 }
-
-//finished

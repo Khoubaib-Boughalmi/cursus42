@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: khoubaib <khoubaib@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kboughal <kboughal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 21:02:32 by khoubaib          #+#    #+#             */
-/*   Updated: 2022/10/07 21:07:36 by khoubaib         ###   ########.fr       */
+/*   Updated: 2022/10/10 17:04:13 by kboughal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static size_t	ft_word_len(char const *str, char c)
 	return (count);
 }
 
-char	*ft_copy(char const *s, char c, int *i)
+static char	*ft_copy(char const *s, char c, int *i)
 {
 	int		word_len;
 	char	*ptr;
@@ -63,7 +63,7 @@ char	*ft_copy(char const *s, char c, int *i)
 	return (ptr);
 }
 
-char	**ft_free(char **ptr, int k)
+static char	**ft_free(char **ptr, int k)
 {
 	while (k--)
 		free(ptr[k]);

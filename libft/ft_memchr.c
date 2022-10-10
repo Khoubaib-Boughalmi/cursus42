@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: khoubaib <khoubaib@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kboughal <kboughal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 20:54:28 by khoubaib          #+#    #+#             */
-/*   Updated: 2022/10/07 20:55:14 by khoubaib         ###   ########.fr       */
+/*   Updated: 2022/10/10 17:03:32 by kboughal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
-//finished
